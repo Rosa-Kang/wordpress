@@ -5885,6 +5885,10 @@ class MyNotes {
         console.log(res);
       },
       error: res => {
+        if (res.responseText.length > 1) {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()(".note-limit-message").addClass("active");
+        }
+
         console.log("Sorry!");
         console.log(res);
       }

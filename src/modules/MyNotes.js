@@ -43,6 +43,9 @@ class MyNotes {
                 console.log(res);
             },
             error: (res) => {
+                if (res.responseText.length > 1) {
+                    $(".note-limit-message").addClass("active");
+                }
                 console.log("Sorry!");
                 console.log(res);
             }
